@@ -1,0 +1,59 @@
+package com.example.appamd;
+
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
+import com.loopj.android.http.*;
+
+import org.json.JSONArray;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cz.msebera.android.httpclient.Header;
+
+public class DentistaActivity extends AppCompatActivity {
+    private EditText edtnome;
+    private ListView lvespecialidade;
+    private AsyncHttpClient client;
+    private String HOST = "https://paulohps1991.000webhostapp.com";
+
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dentista);
+
+        edtnome = (EditText) findViewById(R.id.edtnome);
+        lvespecialidade = (ListView) findViewById(R.id.lvespecialidade);
+
+        String url = HOST + "/newconexao.php";
+
+
+    }
+
+    public void seleciona(View view) {
+        if (edtnome.getText().toString().isEmpty()){
+            Toast.makeText(DentistaActivity.this, "Precisa selecionar um medico",Toast.LENGTH_SHORT).show();
+        }else{
+            Medico m = new Medico();
+
+        }
+    }
+
+}
+
+
+
+
+
