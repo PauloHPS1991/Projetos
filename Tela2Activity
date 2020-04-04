@@ -1,0 +1,58 @@
+package com.example.appamd;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
+
+public class Tela2Activity extends AppCompatActivity {
+
+    private String HOST = "http://192.168.0.17/login/";
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tela2);
+    }
+
+    public void pediatra(View view) {
+
+        Toast.makeText(Tela2Activity.this,"Pediatra" ,Toast.LENGTH_SHORT).show();
+        Intent intent1 = new Intent(getApplicationContext(),PediatraActivity.class);
+        startActivity(intent1);
+    }
+
+    public void clinicoGeral(View view) {
+        Toast.makeText(Tela2Activity.this,"Clinico Geral" ,Toast.LENGTH_SHORT).show();
+        Intent intent1 = new Intent(getApplicationContext(),ClinicoGeralActivity.class);
+        startActivity(intent1);
+
+    }
+
+    public void psiquiatra(View view) {
+
+        Toast.makeText(Tela2Activity.this,"Psiquiatra" ,Toast.LENGTH_SHORT).show();
+        Intent intent1 = new Intent(getApplicationContext(),PsiquiatraActivity.class);
+        startActivity(intent1);
+
+    }
+
+    public void psicologa(View view) {
+        Toast.makeText(Tela2Activity.this,"Psicologa" ,Toast.LENGTH_SHORT).show();
+        Intent intent1 = new Intent(getApplicationContext(),PsicologaActivity.class);
+        startActivity(intent1);
+    }
+
+    public void dentista(View view) {
+        Toast.makeText(Tela2Activity.this,"Dentista" ,Toast.LENGTH_SHORT).show();
+        Intent intent1 = new Intent(getApplicationContext(),DentistaActivity.class);
+        startActivity(intent1);
+    }
+
+    public void mostrarr(View view) {
+
+    }
+}
