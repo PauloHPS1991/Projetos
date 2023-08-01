@@ -2,9 +2,9 @@
 
 define('DB_DRIVER', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_USER', 'id10581753_root');
+define('DB_USER', '');
 define('DB_PWD', '');
-define('DB_DATABASE', 'id10581753_bancodados');
+define('DB_DATABASE', '');
 $dsn = "";
 
 try {
